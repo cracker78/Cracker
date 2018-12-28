@@ -5,10 +5,11 @@ using System.Threading.Tasks;
 
 namespace Cracker.Models
 {
-    public enum WineType
+    public enum BeerType
     {
-        Red=1,
-        White=2,
-        Rose=3,
+
+        Ales=1,
+        Lagers=2,
+        StoutsAndPorters=3,
     }
 }

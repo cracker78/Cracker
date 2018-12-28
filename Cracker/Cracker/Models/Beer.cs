@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cracker.Models
 {
-    public class Wine
+    public class Beer
     {
         [Key]
         public int Id { get; set; }
@@ -16,13 +16,10 @@ namespace Cracker.Models
         public string Name { get; set; }
 
         [Required]
-        [Range(0,20000)]
+        [Range(0, 20000)]
         public double Price { get; set; }
 
-        [Range(1900, 2019)]
-        public int YearBottling { get; set; }
-
-        [Range(8.5, 20.0)]
+        [Range(0, 12.0)]
         public double Alcohol { get; set; }
 
         public string ImagePath { get; set; }
@@ -30,11 +27,13 @@ namespace Cracker.Models
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }
 
-        public WineType WineType { get; set; }
+        public BeerType BeerType { get; set; }
 
-        [Display(Name="Винарна")]
-        public int WineryId { get; set; }
+        public BeerStyle BeerStyle { get; set; }
 
-        public virtual Winery Winery { get; set; }
+        [Display(Name = "Производител")]
+        public int BeerHouseId { get; set; }
+
+        public virtual BeerHouse Beerhouse { get; set; }
     }
 }

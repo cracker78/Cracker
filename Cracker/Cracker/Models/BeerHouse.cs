@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace Cracker.Models
 {
-    public class Winery
+    public class BeerHouse
     {
+        public BeerHouse()
+        {
+            this.Beers = new HashSet<Beer>();
+        }
+
         public int Id { get; set; }
 
         [Required]
@@ -17,6 +22,6 @@ namespace Cracker.Models
         [Required]
         public Country Country { get; set; }
 
-        public virtual ICollection<Wine> Wines { get; set; }
+        public virtual ICollection<Beer> Beers { get; set; }
     }
 }
