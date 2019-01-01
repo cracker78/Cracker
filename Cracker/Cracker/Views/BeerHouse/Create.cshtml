@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+
+@model Cracker.Data.Models.BeerHouse
+
+<h2>Create</h2>
+
+<form asp-action="Create" asp-controller="BeerHouse">
+        <div class="form-group text-center">
+            <h4>BeerHouse</h4>
+            <div asp-validation-summary="ModelOnly"></div>
+            <hr>
+                <div class="form-group align-self-md-center">
+                    <label asp-for="Name" class="col-md-4 text-left"></label>
+                    <input asp-for="Name" class="col-md-4 form-control"/>
+                </div>
+        </div>
+</form>
+
